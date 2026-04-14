@@ -1,19 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Форма выбора питомца</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Заказ питомца</title>
 </head>
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
+  <h1>Заказать питомца</h1>
+  
+  <form action="/pets/orders" method="POST">
+    <label for="petType">Тип питомца:</label><br>
+    <select name="petType" id="petType">
+      <option value="cat" selected>Кошка</option>
+      <option value="dog">Собака</option>
+      <option value="tiger">Тигр</option>
+    </select>
+    <br><br>
 
-    <form action="/pets/orders" method="POST">
-    <input type="text" name="username" placeholder="Имя">
-    <button type="submit">Отправить</button>
-</form>
+    <label>Пол:</label><br>
+    <input type="radio" name="gender" id="boy" value="boy" checked>
+    <label for="boy">Мужской</label>
+    <input type="radio" name="gender" id="girl" value="girl">
+    <label for="girl">Женский</label>
+    <input type="radio" name="gender" id="none" value="none">
+    <label for="none">Не выбран</label>
+    <br><br>
 
-</main>
+    <label for="eyeColor">Цвет глаз:</label><br>
+    <input type="color" name="eyeColor" id="eyeColor" value="#8B4513">
+    <br><br>
+
+    <label for="tailLength">Длина хвоста (см):</label><br>
+    <input type="number" name="tailLength" id="tailLength" placeholder="15" value="10">
+    <br><br>
+
+    <label for="name">Кличка:</label><br>
+    <input type="text" name="name" id="name" placeholder="Илюха монеси" value="Илюха монеси">
+    <br><br>
+
+    <label for="dateOfBirth">Дата рождения:</label><br>
+    <input type="date" name="dateOfBirth" id="dateOfBirth" value="2022-05-10">
+    <br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" name="email" id="email" placeholder="minionBOB@gmail.com" value="minionBOB@gmail.com">
+    <br><br>
+
+    <label for="phone">Телефон:</label><br>
+    <input type="tel" name="phone" id="phone" placeholder="+7999999999" value="+7999999999">
+    <br><br>
+
+    <label for="rules">
+      <input type="checkbox" name="rules" id="rules" value="true" checked>
+      Я принимаю правила
+    </label>
+    <br><br>
+
+    <button type="submit">Отправить заказ</button>
+    <button type="reset">Сбросить</button>
+  </form>
 </body>
 </html>
