@@ -30,11 +30,11 @@
     <br><br>
 
     <label for="tailLength">Длина хвоста (см):</label><br>
-    <input type="number" name="tailLength" id="tailLength" placeholder="15" value="10">
+    <input type="number" name="tailLength" id="tailLength" placeholder="10" value="10" min="7" max="120" step="1" required>
     <br><br>
 
     <label for="name">Кличка:</label><br>
-    <input type="text" name="name" id="name" placeholder="Илюха монеси" value="Илюха монеси">
+    <input type="text" name="name" id="name" placeholder="Илюха монеси" value="Илюха монеси" minlength="3" maxlength="50" required>
     <br><br>
 
     <label for="dateOfBirth">Дата рождения:</label><br>
@@ -42,15 +42,15 @@
     <br><br>
 
     <label for="email">Email:</label><br>
-    <input type="email" name="email" id="email" placeholder="minionBOB@gmail.com" value="minionBOB@gmail.com">
+    <input type="email" name="email" id="email" placeholder="minionBOB@gmail.com" value="minionBOB@gmail.com" required>
     <br><br>
 
     <label for="phone">Телефон:</label><br>
-    <input type="tel" name="phone" id="phone" placeholder="+7999999999" value="+7999999999">
+    <input type="tel" name="phone" id="phone" placeholder="+7999999999" value="+7999999999" required>
     <br><br>
 
     <label for="rules">
-      <input type="checkbox" name="rules" id="rules" value="true" checked>
+      <input type="checkbox" name="rules" id="rules" value="true" checked required>
       Я принимаю правила
     </label>
     <br><br>
